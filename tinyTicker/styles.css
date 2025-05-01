@@ -1,0 +1,225 @@
+@import url('https://fonts.googleapis.com/css2?family=Lexend+Deca:wght@100..900&display=swap');
+
+
+/* || RESET */
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+}
+
+/* || VARIABLES */
+:root {
+  /* COLORS */
+  --body : #000000;
+  --border: #0CA601;
+  --red:  #FD0808;
+  --white:#FFFFFF;
+  --gray: #515151;
+ 
+
+  /* TYPOGRAPHY */
+  --ff: Lexend Deca, "sans-serif";
+
+  --title : 600 1.3rem var(--ff);
+  --search-font : 500 .625rem var(--ff);
+  --coin-font :500 .75rem var(--ff);
+}
+
+/* || UTILITY CLASSES */
+.offscreen {
+  position: absolute;
+  left: -10000px;
+}
+
+.nowrap {
+  white-space: nowrap;
+}
+
+.center {
+  text-align: center;
+}
+
+.responsive-image {
+  display: flex;
+}
+
+/* MOBILE FIRST DESIGN */
+/* || GENERAL STYLES */
+html {
+  scroll-behavior: smooth;
+  font-size: 1rem;
+}
+
+body {
+  min-height: 100vh;
+  max-width: 100%;
+  overflow-x: hidden;
+  overflow-y: hidden;
+  display: grid;
+  justify-content: center;
+}
+body::-webkit-scrollbar,
+.main-card__crypto-listings::-webkit-scrollbar {
+    width: 7px;    
+    background-color: rgb(51, 74, 52);
+    border-radius: 50px;
+}
+
+a:any-link {
+  text-decoration: none;
+  color: var(--white);
+}
+
+.main-card{
+    width: 21.25rem;    
+    height: 285px;
+    margin-top: 2.8125rem;
+    background-color: var(--body);
+    border: none;
+    border-radius: 15px;
+}
+
+.main-card__header{
+    border-radius: 20px 20px 0 0;
+    position: fixed;   
+    height: 73px;
+    width: 21.25rem;      
+}
+
+.main-card__header-title{    
+    margin: .6875rem .3125rem 0rem .5rem;
+    display: flex;
+    flex-direction: column;
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 7px;
+}
+
+img {
+    width: 32px;
+    height: 32px;
+    border: 2px solid var(--border);
+    border-radius: 50px;
+}
+
+.main-card__header-name {
+    font: var(--title);    
+    color: var(--white);
+}
+
+.main-card__header-name2 {
+    font: var(--title);
+    color: var(--red);
+}
+
+.search-bar__container {
+    position: relative;
+    width: 153px;
+    margin: .125rem .3125rem .3125rem 10.4875rem;
+}
+
+input {
+    border: 1px solid var(--border);
+    border-radius: 50px;
+    width: 100%;
+    height: 26px;
+    background-color: var(--body);
+    color: var(--white);
+    padding: 0 50px 0 10px;
+}
+
+::placeholder {
+    color: #626161a8;
+    font-size: .6rem;
+}
+
+.btn-primary {
+    position: absolute;
+    right: 5px;
+    top: 50%;
+    transform: translateY(-50%);
+    font: var(--search-font);
+    color: var(--white);
+    
+}
+.btn-primary:hover{
+  color: var(--red);
+}
+
+.main-card__crypto-listings {
+  margin-top: 75px; 
+  padding: 1px;
+  overflow-y: auto;
+  max-height: 200px;
+}
+
+.crypto-item {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  border-bottom: 1px solid #333;
+  color: var(--white);
+  font: var(--coin-font);
+}
+
+.crypto-left {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.crypto-logo {
+  width: 24px;
+  height: 24px;
+  border-radius: 50%;
+}
+
+.crypto-info {
+  display: flex;
+  flex-direction: column;
+}
+
+.crypto-name {
+  color: var(--white);
+}
+
+.crypto-abbr {
+  color: var(--gray);
+  font-size: 0.6rem;
+}
+
+.crypto-right {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-end;
+}
+
+.crypto-price {
+  color: var(--white);
+}
+
+.positive-change {
+  color: var(--border); 
+}
+
+.negative-change {
+  color: var(--red);
+}
+
+.loading-indicator, .error-message {
+  color: var(--white);
+  text-align: center;
+  padding: 10px;
+  font: var(--coin-font);
+}

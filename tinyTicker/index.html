@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Abigirl Muchineripi">
+    <meta name="description" content="crypto widget">
+    <title>tinyTicker</title>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="shortcut icon" 
+    href="./images/favicon.png" 
+    type="image/x-icon">
+    <script src="index.js"></script>
+    <script src="script.js" defer></script>
+    
+</head>
+<body>
+    <article class="main-card">
+        <header class="main-card__header">
+           
+            <section class="main-card__header-title">
+                <div class="logo-container">
+                    <img src="./images/logo.png"
+                     alt="favicon"
+                     loading="lazy">
+                     <figcaption class="offscreen">icon image</figcaption>
+                
+                    <p class="main-card__header-name">tiny<span class="main-card__header-name2">Ticker</span></p>
+                </div>
+                
+                <div class="search-bar__container">
+                    <input 
+                    type="text"
+                    class="search-bar"
+                    id="search-bar"
+                    placeholder="e.g BTC / Bitcoin"
+                    required>
+                    
+                    <a href="#"                 
+                        class="btn-primary"
+                        id="search-btn"
+                        role="button"
+                        >search</a>
+                </div>
+
+            </section>
+
+        </header>
+
+        <section class="main-card__crypto-listings">
+            
+        </section>
+        <section class="main-card__crypto-listings">
+            <div class="loading-indicator">Current Crypto Prices!</div>
+        </section>
+
+    </article>
+    
+</body>
+</html>
